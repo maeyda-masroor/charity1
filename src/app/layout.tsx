@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "./style.css"
 import Navbar from "../../components/Navbar";
-import  "bootstrap/dist/css/bootstrap.min.css"
+import TopNavbar from "../../components/TopNavbar";
+import  "./bootstrap.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "./bootsnav.css";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -27,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <TopNavbar/>
       <Navbar/>
         {children}
       </body>

@@ -1,96 +1,40 @@
-export default function Home() {
+import Image from 'next/image'
+import x from '../public/image/x.png';
+export default function Navbar() {
     return (
-      <div>
-        {/* navbar */}
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
-          <div className="container-fluid">
-            <a className="navbar-brand" href="#">
-              Navbar
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
-                    Contact-us
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
-                    About Us
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Link
-                  </a>
-                </li>
-              </ul>
-              <form className="d-flex" role="search">
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button className="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
-            </div>
-          </div>
-        </nav>
-        <h2 className="text-center text-bg-primary m-2 p-2">
-          Bootstrap 5 with Next.js
-        </h2>
-        <div className="container-fluid m-2 border border-success text-center">
-          <h4>Components</h4>{" "}
-          <div className="row m-2 ">
-            <div className="col-sm">First Component</div>
-            <div className="col-sm">Second Component</div>
-            <div className="col-sm">Third Component</div>
-          </div>
-        </div>
-        <div className="container-fluid m-2 border text-center">
-          <h4>Buttons</h4>
-          <div className="row m-2 justify-content-between ">
-            <div className="col-sm-auto">
-              <button type="button" className="btn btn-primary">
-                Primary
-              </button>
-            </div>
-            <div className="col-sm-auto">
-              <button type="button" className="btn btn-secondary">
-                Secondary
-              </button>
-            </div>
-            <div className="col-sm-auto">
-              <button type="button" className="btn btn-success">
-                Success
-              </button>
-            </div>
-            <div className="col-sm-auto">
-              <button type="button" className="btn btn-danger">
-                Danger
-              </button>
-            </div>
-          </div>
-        </div>
+      <nav className="navbar navbar-default navbar-sticky bootsnav">
+      <div className="container">
+      <div className="row"> 
+      <div className="attr-nav">
+      <a className="sponsor-button" href="sponsor-a-child.html">sponsor a child</a>
+      <a className="donation" href="donate.html">donate now</a>
+      </div>           
+      <div className="navbar-header">
+      <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+      <i className="fa fa-bars"></i>
+      </button>
+      <a className="navbar-brand logo" href="index.html">
+      <Image
+      src={x}
+      width={50}
+      height={50}
+      alt="Picture of the author"
+    />
+      </a>
       </div>
+      <div className="collapse navbar-collapse" id="navbar-menu">
+      <ul className="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      </div>
+      </div>
+      </div>
+      </nav>
+
     );
   }
